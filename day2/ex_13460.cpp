@@ -13,7 +13,7 @@ int main()
 {
     int n, m;
     char arr[10][10];
-    queue<int> RQx, RQy, BQx, BQy;
+    queue<int> RQx, RQy, BQx, BQy, cntQ;
 
     // Input n, m, GRID
     cin >> n >> m;
@@ -38,12 +38,31 @@ int main()
     }
 
     int mx[4] = {0, 1, 0, -1}, my[4] = {1, 0, -1, 0}; // right, down, left, up
+    int isGoalR = 0, isGoalB = 0;
+    cntQ.push(0);
 
-    for (int cnt = 0; cnt < 10; cnt++)
+    while (!cntQ.empty())
     {
         for (int dir = 0; dir < 4; dir++)
         {
-            int Rx = RQx.front(), Ry = RQy.front(), Bx = BQx.front(), By = BQy.front();
+            int Rx = RQx.front(), Ry = RQy.front(), Bx = BQx.front(), By = BQy.front(), cnt = cntQ.front();
+
+            if (arr[Rx][Ry] != 'O')
+            {
+                isGoalR = 0;
+            }
+            else
+            {
+                isGoalR = 1;
+            }
+            if (arr[Bx][By] != 'O')
+            {
+                isGoalB = 0;
+            }
+            else
+            {
+                isGoalB = 1;
+            }
 
             int isMoveR = 1;
             int isMoveB = 1;
@@ -51,10 +70,19 @@ int main()
             {
                 isMoveR = 0;
                 isMoveB = 0;
-                while (1)
+                while (!isGoalR)
                 {
                     int nextRx = Rx + mx[dir], nextRy = Ry + my[dir];
-                    if (arr[nextRx][nextRy] == '#' || (nextRx == Bx && nextRy == By))
+
+                    if (arr[nextRx][nextRy] == 'O')
+                    {
+                        isGoalR = 1;
+                        Rx = nextRx;
+                        Ry = nextRy;
+                        isMoveR = 1;
+                        break;
+                    }
+                    else if (arr[nextRx][nextRy] == '#' || (nextRx == Bx && nextRy == By))
                     {
                         break;
                     }
@@ -62,10 +90,19 @@ int main()
                     Ry = nextRy;
                     isMoveR = 1;
                 }
-                while (1)
+                while (!isGoalB)
                 {
                     int nextBx = Bx + mx[dir], nextBy = By + my[dir];
-                    if (arr[nextBx][nextBy] == '#' || (nextBx == Rx && nextBy == Ry))
+
+                    if (arr[nextBx][nextBy] == 'O')
+                    {
+                        isGoalB = 1;
+                        Bx = nextBx;
+                        By = nextBy;
+                        isMoveB = 1;
+                        break;
+                    }
+                    else if (arr[nextBx][nextBy] == '#' || (nextBx == Rx && nextBy == Ry))
                     {
                         break;
                     }
@@ -75,22 +112,45 @@ int main()
                 }
             }
 
+            if (isGoalB)
+            {
+                // Fail
+                continue;
+            }
+            else if (isGoalR)
+            {
+                // Success
+                std::cout << cnt + 1 << endl;
+
+                // system("pause");
+                return 0;
+            }
+            else if (cnt == 9)
+            {
+                // Fail
+                continue;
+            }
+
             RQx.push(Rx);
             RQy.push(Ry);
             BQx.push(Bx);
             BQy.push(By);
-            cout << Rx << " " << Ry << endl
-                 << Bx << " " << By << endl
-                 << endl;
+            cntQ.push(cnt + 1);
+            // cout << Rx << " " << Ry << endl
+            //      << Bx << " " << By << endl
+            //      << cnt << endl;
         }
+
         RQx.pop();
         RQy.pop();
         BQx.pop();
         BQy.pop();
-        break;
+        cntQ.pop();
     }
 
-    system("pause");
+    std::cout << -1 << endl;
+
+    // system("pause");
 
     return 0;
 }
