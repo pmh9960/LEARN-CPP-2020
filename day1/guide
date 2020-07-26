@@ -1,0 +1,8 @@
+terminal command
+
+1. g++ -o <output file name> <cpp files>
+generate .exe file
+2. g++ -s <cpp files>
+generate assembly files
+3. g++ -c <cpp files>
+generate object files w/o linking
