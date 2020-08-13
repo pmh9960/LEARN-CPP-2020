@@ -24,6 +24,33 @@ Learning C++
 
 - Linked list with class
 
-## Day 5 (next plan)
+## Day 5
 
-- Inheritance <https://www.youtube.com/watch?v=X8nYM8wdNRE&list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb&index=27>
+- Basic concept of Inheritance
+
+- Virtual function and override
+
+  - Pure virtual function
+
+- Visibility
+
+  - Private, protected, public
+
+    1. Private : Only current class can see the members.
+
+    1. Protected : Current class and its subclasses can see the members.
+
+    1. public : Everyone can see the members.
+
+  * new / delete
+
+    ```cpp
+    int *ptr = new int[5];
+    delete[] ptr;
+    ```
+
+    1. `new` allocate the data to the heap memory (general = stack).
+
+    1. The data in heap does not end when they go out of namespace (`{ }`).
+
+    1. We have to use `delete` or `delete[]` to clean up the memory.
