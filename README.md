@@ -54,3 +54,11 @@ Learning C++
     1. The data in heap does not end when they go out of namespace (`{ }`).
 
     1. We have to use `delete` or `delete[]` to clean up the memory.
+
+## [Day 6](day6/note.md)
+
+- [Array](day6/array.cpp)
+
+- [String](day6/string.cpp)
+
+- cf. String Literals in C++
