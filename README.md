@@ -62,3 +62,19 @@ Learning C++
 - [String](day6/string.cpp)
 
 - cf. String Literals in C++
+
+## [Day 7](day7/note.md)
+
+- [Constant keyward (`const`)](day7/const.cpp)
+
+- [Const in Class](day7/const_in_class.cpp)
+
+- [Mutable keyword (`mutable`)](day7/mutable.cpp)
+
+- [Member initializer list](day7/initializer_list.cpp)
+
+- [Ternary operation](day7/ternary_operation.cpp)
+
+- cf. How to declare multiple pointers in one-line.
+
+- cf. Lambda
