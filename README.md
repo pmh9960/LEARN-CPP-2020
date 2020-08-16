@@ -55,7 +55,7 @@ Learning C++
 
     1. We have to use `delete` or `delete[]` to clean up the memory.
 
-## [Day 6](day6/note.md)
+## [Day 6](day6/readme.md)
 
 - [Array](day6/array.cpp)
 
@@ -63,7 +63,7 @@ Learning C++
 
 - cf. String Literals in C++
 
-## [Day 7](day7/note.md)
+## [Day 7](day7/readme.md)
 
 - [Constant keyward (`const`)](day7/const.cpp)
 
