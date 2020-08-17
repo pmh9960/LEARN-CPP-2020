@@ -82,3 +82,7 @@ Learning C++
 ## [Day 8](day8/README.md)
 
 - [Create/Instantiate objects](day8/instantiate_objects.cpp)
+
+- [The `new` keyword](day8/new.cpp)
+
+- [Implicit conversion and Explicit keyword](day8/implicit.cpp)
