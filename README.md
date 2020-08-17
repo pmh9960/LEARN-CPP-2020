@@ -78,3 +78,7 @@ Learning C++
 - cf. How to declare multiple pointers in one-line.
 
 - cf. Lambda
+
+## [Day 8](day8/README.md)
+
+- [Create/Instantiate objects](day8/instantiate_objects.cpp)
