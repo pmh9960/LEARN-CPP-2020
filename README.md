@@ -86,3 +86,9 @@ Learning C++
 - [The `new` keyword](day8/new.cpp)
 
 - [Implicit conversion and Explicit keyword](day8/implicit.cpp)
+
+## [Day 9](day9/README.md)
+
+- [Operator](day9/operator.cpp)
+
+- [`this` keyword](day9/this.cpp)
