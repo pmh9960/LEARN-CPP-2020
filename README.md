@@ -92,3 +92,13 @@ Learning C++
 - [Operator](day9/operator.cpp)
 
 - [`this` keyword](day9/this.cpp)
+
+## [Day 10](day10/README.md)
+
+- [Stack and scope](day10/stack_and_scope.cpp)
+
+- [Smart pointers](day10/smart_pointers.cpp)
+
+- [Copying and Copy Constructors](day10/copy_constructors.cpp)
+
+- cf. `friend` keyword
